@@ -1,0 +1,63 @@
+.nav{
+    background-color: #222;
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem;
+    align-items: center;
+}
+
+.logo{
+    font-size: 2rem;
+    font-weight: 700;
+    color: white;
+}
+
+.ul{
+    display: flex;
+    gap: 2rem;
+    font-size: 1.777rem;
+    align-items: center;
+}
+
+.ul a:link,
+.ul a:visited{
+    color: plum;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 500;
+    display: inline-block;
+}
+
+.ul a:hover,
+.ul a:active{
+    color: purple;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 500;
+    display: inline-block;
+}
+
+.btn:link,
+.btn:visited{
+    background-color: goldenrod;
+    color: purple !important;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 500;
+    padding: 1rem;
+    border-radius: 5px;
+}
+
+.btn:hover,
+.btn:active{
+    background-color: purple;
+    color: #222 !important;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 500;
+    padding: 1rem;
+    border-radius: 5px;
+}
+
+
+

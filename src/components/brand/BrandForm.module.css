@@ -1,0 +1,29 @@
+.form{
+    background-color: rgba(255, 255, 255, 01);
+    border-radius: 5px;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    width: 30%;
+    justify-content: center;
+}
+
+.element{
+    font-size: 1.777rem;
+    margin: 1rem;
+}
+
+.btn-sp{
+    margin: 1rem;
+    background-color: blueviolet;
+    padding: 1rem;
+    font-size: 1.777rem;
+    color: white;
+    cursor: pointer;
+    border: 0px solid black;
+}
+
+.invalid{
+    background-color: rgba(255, 0, 0, 0.445);
+}
