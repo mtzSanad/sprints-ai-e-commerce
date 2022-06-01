@@ -1,3 +1,4 @@
+import { NavLink } from "react-router-dom";
 import styles from "./Header.module.css";
 
 const Header = () => {
@@ -6,10 +7,28 @@ const Header = () => {
       <div className={styles.logo}>e-Commerce</div>
       <ul className={styles.ul}>
         <li>
-          <a href="#">Link A</a>
+          <NavLink
+            to="/"
+            className={(navStatus) => (navStatus.isActive ? styles.active : "")}
+          >
+            Home
+          </NavLink>
         </li>
         <li>
-          <a href="#">Link B</a>
+          <NavLink
+            to="/brand"
+            className={(navStatus) => (navStatus.isActive ? styles.active : "")}
+          >
+            Brand Form
+          </NavLink>
+        </li>
+        <li>
+          <NavLink
+            to="/brand/1"
+            className={(navStatus) => (navStatus.isActive ? styles.active : "")}
+          >
+            Brand Details
+          </NavLink>
         </li>
         <li>
           <a href="#" className={styles.btn}>

@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import styles from "./BrandForm.module.css";
 
 const BrandForm = () => {
@@ -8,6 +9,9 @@ const BrandForm = () => {
     brandImage: "",
     brandColor: "black",
   });
+
+  //Navigation
+  const navigate = useNavigate();
 
   const brandAddHandler = (e) => {
     e.preventDefault();
@@ -29,6 +33,11 @@ const BrandForm = () => {
     });
   };
 
+  const navigateHandler = (e) => {
+    e.preventDefault();
+    navigate("/brand/4", { replace: true }); // if need to replace the current url
+    // navigate(-1) //return to previous or -2 or 1 to forward
+  };
   return (
     <div className="container">
       <form className={styles.form}>
@@ -71,6 +80,14 @@ const BrandForm = () => {
           name="brand-delete"
           onClick={brandDeleteHandler}
           value="Invalidate/Validate Form Dynamic Style"
+        />
+
+        <input
+          className={styles["btn-sp"]}
+          type="button"
+          name="brand-navigate"
+          onClick={navigateHandler}
+          value="Prgramatic Navigation"
         />
       </form>
     </div>
