@@ -1,7 +1,19 @@
 import { NavLink } from "react-router-dom";
 import styles from "./Header.module.css";
+import { useDispatch } from "react-redux";
+import { authActions } from "../../store/auth-slice";
+import { useSelector } from "react-redux";
 
 const Header = () => {
+  const dispatch = useDispatch();
+
+  const userName = useSelector((state) => state.auth.userName);
+
+  const signInHandler = (e) => {
+    e.preventDefault();
+    dispatch(authActions.setUserName());
+  };
+
   return (
     <nav className={styles.nav}>
       <div className={styles.logo}>e-Commerce</div>
@@ -31,8 +43,8 @@ const Header = () => {
           </NavLink>
         </li>
         <li>
-          <a href="#" className={styles.btn}>
-            Sign out
+          <a href="#" className={styles.btn} onClick={signInHandler}>
+            {userName ? `Sign out ${userName}` : "Sign in"}
           </a>
         </li>
       </ul>

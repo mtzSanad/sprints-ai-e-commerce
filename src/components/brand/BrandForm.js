@@ -1,8 +1,11 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import styles from "./BrandForm.module.css";
+import { useDispatch } from "react-redux";
+import { addBrandThunk } from "../../store/brand-slice";
 
 const BrandForm = () => {
+  const dispatch = useDispatch();
   const [isValidForm, setIsValidForm] = useState(true);
   const [formData, setFormData] = useState({
     brandName: "",
@@ -15,7 +18,8 @@ const BrandForm = () => {
 
   const brandAddHandler = (e) => {
     e.preventDefault();
-    alert(JSON.stringify(formData, null, 2));
+    dispatch(addBrandThunk({ ...formData, brandId: Math.random().toString() }));
+    alert(JSON.stringify({ formData }, null, 2));
   };
 
   const brandDeleteHandler = (e) => {
