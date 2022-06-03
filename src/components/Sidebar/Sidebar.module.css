@@ -1,0 +1,95 @@
+.sidebar {
+  padding: 0 1em;
+  display: flex;
+  justify-content: flex-start;
+  align-self: center;
+  flex-wrap: wrap;
+  row-gap: 1em;
+  column-gap: 2em;
+}
+
+.sidebar h4 {
+  color: #333;
+  margin: 0.5em 0;
+}
+
+.department .category {
+  display: block;
+  font-size: 14px;
+  margin-left: 15px;
+}
+
+.customer-review-filter span {
+  display: block;
+  padding: 0.2em;
+}
+
+.brand-filter form {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1em;
+}
+
+.brand-filter .brand-check label {
+  margin-left: 0.2em;
+}
+
+.price-filter .price-range {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.5em;
+}
+
+.price-filter .price-range p {
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.price-filter form {
+  margin: 0.5em 0;
+}
+.price-filter form input {
+  margin: 0.5em;
+  width: 75px;
+  height: 31px;
+  padding: 3px 7px;
+  line-height: normal;
+  outline: none;
+  border: 1px solid #333;
+}
+
+.price-filter form input[type="submit"] {
+  background-color: transparent;
+  outline: 0;
+  border: 1px solid #333;
+  border-radius: 0.5em;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+@media (min-width: 760px) {
+  .sidebar {
+    padding: 1em;
+    max-width: 30%;
+    align-self: flex-start;
+  }
+}
+
+/* LARGE */
+@media (min-width: 1200px) {
+  .sidebar {
+    flex-direction: column;
+  }
+
+  .brand-filter form {
+    margin-left: 15px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .price-filter .price-range {
+    margin-left: 15px;
+    display: flex;
+    flex-direction: column;
+  }
+}

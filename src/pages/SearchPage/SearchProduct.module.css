@@ -1,0 +1,42 @@
+.search-page {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 760px) {
+  .search-page {
+    flex-direction: row;
+  }
+
+  .products-section {
+    max-width: 70%;
+  }
+}
+
+.products-section {
+  margin: 1em 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1em;
+}
+/********************/
+/****** Media *******/
+/********************/
+/*SMALL*/
+@media (min-width: 760px) {
+  .products-section {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+/*MEDUIM*/
+@media (min-width: 992px) {
+  .products-section {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+/* LARGE */
+/* @media (min-width: 1200px) {
+  .products-section {
+    grid-template-columns: repeat(6, 1fr);
+  }
+} */

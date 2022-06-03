@@ -1,0 +1,12 @@
+.view-category-page {
+  /* margin: 1em 0; */
+}
+.view-category-page h1 {
+  margin: 0 auto;
+  margin-top: 3em;
+  width: max-content;
+}
+.view-category-page .product-section {
+  margin: 2em;
+  display: flex;
+}

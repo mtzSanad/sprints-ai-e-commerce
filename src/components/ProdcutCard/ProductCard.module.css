@@ -1,0 +1,109 @@
+.product-card {
+  width: 300px;
+  position: relative;
+  box-shadow: 0 2px 7px #dfdfdf;
+  /* margin: 50px auto; change */
+  background-color: #fafafa;
+}
+
+.badge {
+  position: absolute;
+  left: 0;
+  top: 20px;
+  text-transform: uppercase;
+  font-size: 13px;
+  font-weight: bold;
+  /* background-color: crimson; */
+  color: white;
+  padding: 3px 10px;
+}
+
+.product-img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 250px;
+  padding: 30px;
+  background-color: #f0f0f0;
+}
+
+.product-img img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.product-details {
+  padding: 30px;
+}
+
+.product-category {
+  margin-bottom: 18px;
+}
+
+.product-category .span {
+  margin-right: 10px;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #ccc;
+}
+
+.product-details h4 {
+  font-weight: 500;
+  display: block;
+  margin-bottom: 18px;
+  text-transform: uppercase;
+  color: #363636;
+  text-decoration: none;
+  transition: 0.3s;
+  white-space: break-spaces;
+}
+
+.product-details h4:hover {
+  color: #fbb72c;
+}
+
+.product-details p {
+  font-size: 13px;
+  line-height: 22px;
+  color: #999;
+  margin-bottom: 18px;
+  white-space: break-spaces;
+}
+
+.product-btn-details {
+  overflow: hidden;
+  border-top: 1px solid #eee;
+  padding-top: 20px;
+}
+
+.product-btn-details div {
+  display: inline-flex;
+  width: calc(50% - 30px);
+}
+
+.product-price {
+  font-size: 18px;
+  color: #fbb72c;
+  font-weight: 600;
+}
+
+.product-btn-details button {
+  margin: 0.5 auto;
+  padding: 10px 15px;
+  background-color: crimson;
+  border: 1px solid crimson;
+  outline: none;
+  border-radius: 0.5em;
+  color: #eee;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.product-btn-details button:hover {
+  border: 1px solid crimson;
+  background-color: #eee;
+  color: crimson;
+}
