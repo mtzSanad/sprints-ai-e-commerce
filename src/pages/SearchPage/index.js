@@ -23,7 +23,7 @@ const SearchPage = () => {
 
 
     return (
-        <div className={styles["container search-page"]}>
+        <div className={`container ${styles["search-page"]}`}>
             <Sidebar categories={productCategories} loading={isLoading}/>
             <section className={styles["products-section"]}>
                 {isLoading && <p>Loading...</p>}

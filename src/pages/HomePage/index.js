@@ -2,7 +2,7 @@
 import ProductCard from "../../components/ProdcutCard";
 import Carousel,{ CarouselItem} from "../../components/Carousel";
 import { useDispatch, useSelector } from "react-redux";
-import { useEffect, useState } from "react";
+import { useEffect} from "react";
 import { getProducts,getProductCategories } from "../../store/productSlice";
 //images
 //images 
