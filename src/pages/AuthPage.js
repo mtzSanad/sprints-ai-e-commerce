@@ -1,7 +1,7 @@
 import React, { useState, useContext } from "react";
 import AuthForm from "../components/Auth/AuthForm";
 import { useNavigate } from "react-router-dom";
-import AuthContext from "../components/store/auth-context";
+import AuthContext from "../store/auth-context";
 
 const emailregx =
   /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;

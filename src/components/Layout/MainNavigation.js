@@ -1,7 +1,8 @@
 import React, { useContext } from "react";
 import { NavLink } from "react-router-dom";
-import AuthContext from "../store/auth-context";
+import AuthContext from "../../store/auth-context";
 import classes from "./MainNavigation.module.css";
+
 
 const MainNavigation = () => {
   const authCtx = useContext(AuthContext);

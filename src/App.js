@@ -8,7 +8,7 @@ import ProductPage from "./pages/ProductPage";
 import SearchPage from "./pages/SearchPage";
 import CartPage from "./pages/CartPage";
 import Layout from "./components/Layout/Layout";
-import AuthContext from "./components/store/auth-context";
+import AuthContext from "./store/auth-context";
 import AuthPage from "./pages/AuthPage";
 import HomePage from "./pages/HomePage";
 
