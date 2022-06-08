@@ -1,0 +1,19 @@
+.starting {
+  margin: 3rem auto;
+  text-align: center;
+}
+
+.starting h1 {
+  font-size: 5rem;
+}
+
+
+.view-category-page h1 {
+  margin: 0 auto;
+  margin-top: 3em;
+  width: max-content;
+}
+.view-category-page .product-section {
+  margin: 2em;
+  display: flex;
+}

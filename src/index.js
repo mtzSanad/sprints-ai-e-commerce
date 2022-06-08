@@ -1,20 +1,31 @@
-
+import "./normalize.css";
+import { Provider } from "react-redux";
+import store from "./store";
 import React from "react";
 import ReactDOM from "react-dom/client";
-import "./normalize.css";
+import { BrowserRouter } from "react-router-dom";
 import "./index.css";
 import App from "./App";
-import { BrowserRouter } from "react-router-dom";
-import { Provider } from 'react-redux';
-import store from './store';
+import { AuthContextProvider } from "./components/store/auth-context";
+
+// const root = ReactDOM.createRoot(document.getElementById("root"));
+// root.render(
+//   <AuthContextProvider>
+//     <BrowserRouter>
+//       <App />
+//     </BrowserRouter>
+//   </AuthContextProvider>
+// );
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <Provider store={store}>
-      <BrowserRouter>
-        <App />
-      </BrowserRouter>
+      <AuthContextProvider>
+        <BrowserRouter>
+          <App />
+        </BrowserRouter>
+      </AuthContextProvider>
     </Provider>
   </React.StrictMode>
 );

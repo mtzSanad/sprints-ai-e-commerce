@@ -1,0 +1,16 @@
+.modal {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.modal button {
+  width: 200px;
+  justify-content: center;
+  margin: 0 auto;
+  align-items: center;
+}
+
+.modalcontent {
+}
