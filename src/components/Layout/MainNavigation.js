@@ -49,11 +49,6 @@ const MainNavigation = () => {
         </li>
     
      
-            <li>
-              <NavLink activeClassName={classes.active} to="/cart">
-                Cart
-              </NavLink>
-            </li>
        
        
 
