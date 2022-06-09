@@ -5,63 +5,6 @@ import Input from "../../UI/Input/Input";
 import FormActions from "../../UI/Input/FormActions/FormActions";
 
 const AuthForm = (props) => {
-  
-  const fetchUser = () => {
-    let url;
-    if (props.isLogin) {
-      url =
-        "https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=AIzaSyAsJgNrox24sxPJLVDa_0hTtU5iem_ZvN4";
-    } else {
-      url =
-        "https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=AIzaSyAsJgNrox24sxPJLVDa_0hTtU5iem_ZvN4";
-    }
-
-    fetch(url, {
-      method: "POST",
-      body: JSON.stringify({
-        email: enteredEmail,
-        displayName: enteredName,
-        password: enteredPassword,
-        returnSecureToken: true,
-      }),
-      headers: {
-        "Content-Type": "application/json",
-      },
-    })
-      .then((res) => {
-        props.setIsLoading(false);
-
-        if (res.ok) {
-          return res.json();
-        } else {
-          return res.json().then((data) => {
-            //show an error modal
-            console.log(data);
-
-            let errorMessage = "Authentication Failed";
-            if (data && data.error && data.error.message) {
-              errorMessage = data.error.message;
-            }
-            throw new Error(errorMessage);
-          });
-        }
-      })
-      .then((data) => {
-        const expirationTime = new Date(
-          new Date().getTime() + +data.expiresIn * 1000
-        );
-        props.authCtx.login(data.idToken, expirationTime.toISOString());
-        props.modalCtx.onShowModal();
-
-        props.navigate("/");
-        localStorage.setItem("uname", data.displayName);
-      })
-
-      .catch((err) => {
-        alert(err.message);
-      });
-  };
-
   const switchAuthModeHandler = () => {
     props.setIsLogin((prevState) => !prevState);
   };
@@ -141,6 +84,61 @@ const AuthForm = (props) => {
     resetValues();
 
     props.setIsLoading(true);
+
+    async function fetchUser() {
+      try {
+        let url;
+        if (props.isLogin) {
+          url =
+            "https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=AIzaSyAsJgNrox24sxPJLVDa_0hTtU5iem_ZvN4";
+        } else {
+          url =
+            "https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=AIzaSyAsJgNrox24sxPJLVDa_0hTtU5iem_ZvN4";
+        }
+
+        const res = await fetch(url, {
+          method: "POST",
+          body: JSON.stringify({
+            email: enteredEmail,
+            displayName: enteredName,
+            password: enteredPassword,
+            returnSecureToken: true,
+          }),
+          headers: {
+            "Content-Type": "application/json",
+          },
+        });
+
+        const data = await res.json();
+
+        if (!res.ok) {
+          props.setIsLoading(false);
+
+          let errorMessage = "There is something went wrong";
+
+          if (data && data.error && data.error.message) {
+            errorMessage = data.error.message;
+          }
+
+          throw new Error(errorMessage);
+        }
+
+        const expirationTime = new Date(
+          new Date().getTime() + +data.expiresIn * 1000
+        );
+        props.authCtx.login(data.idToken, expirationTime.toISOString());
+        props.modalCtx.onShowModal();
+
+        props.navigate("/");
+        localStorage.setItem("uname", data.displayName);
+      } catch (err) {
+        alert(err.message);
+      }
+
+      // .catch((err) => {
+      //   alert(err.message);
+      // });
+    }
 
     fetchUser();
   };

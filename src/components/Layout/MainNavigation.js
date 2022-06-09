@@ -41,8 +41,7 @@ const MainNavigation = () => {
         </li>
         <li>
           <NavLink
-            to="/brand/1"
-            className={(navStatus) => (navStatus.isActive ? classes.active : "")}
+            to="/brand/1" className={(navStatus) => (navStatus.isActive ? classes.active : "")}
           >
             Brand Details
           </NavLink>
@@ -54,26 +53,26 @@ const MainNavigation = () => {
 
           {isLoggedIn && (
             <li>
-              <NavLink activeClassName={classes.active} to="/profile">
+              <NavLink  className={(navStatus) => (navStatus.isActive ? classes.active : "")}  to="/profile">
                 Profile
               </NavLink>
             </li>
           )}
           {isLoggedIn && (
             <li>
-              <NavLink activeClassName={classes.active} to="/cart">
+              <NavLink className={(navStatus) => (navStatus.isActive ? classes.active : "")} to="/cart">
                 Cart
               </NavLink>
             </li>
           )}
              {!isLoggedIn ? (
             <li>
-              <NavLink activeClassName={classes.active} to="/auth">
+              <NavLink className={(navStatus) => (navStatus.isActive ? classes.active : "")} to="/auth">
                 Login & Register
               </NavLink>
             </li>
           ) : (
-            <NavLink activeClassName={classes.active} to="/profile">
+            <NavLink className={(navStatus) => (navStatus.isActive ? classes.active : "")} to="/profile">
               Welcome {uName}
             </NavLink>
           )}
