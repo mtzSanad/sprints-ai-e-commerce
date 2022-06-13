@@ -42,7 +42,7 @@ const Header = () => {
           <a href="#" className={styles.btn}>
             Sign out
           </a>
-        </li>
+        </li> 
       </ul>
     </nav>
   );
