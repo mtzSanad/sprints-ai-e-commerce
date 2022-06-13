@@ -48,7 +48,7 @@ const Header = () => {
         </li>
         <li>
           <a href="#" className={styles.btn}>
-            Sign out
+            Sign in
           </a>
         </li>
       </ul>
