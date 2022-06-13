@@ -8,6 +8,7 @@ import HomePage from "./pages/HomePage";
 import ProductPage from "./pages/ProductPage";
 import SearchPage from "./pages/SearchPage";
 import CartPage from "./pages/CartPage";
+import AuthPage from "./pages/AuthPage";
 
 function App() {
   return (
@@ -16,12 +17,13 @@ function App() {
       <main>
         <Routes>
           <Route path="/home" element={<Navigate replace to="/" />} />
-          <Route path="/" element={<HomePage/>} />
+          <Route path="/" element={<HomePage />} />
           <Route path="/brand" element={<BrandForm />} />
           <Route path="/brand/:brandId" element={<BrandDetails />} />
           <Route path="/product/:productId" element={<ProductPage />} />
           <Route path="/search" element={<SearchPage />} />
           <Route path="/cart" element={<CartPage />} />
+          <Route path="/signin" element={<AuthPage />} />
         </Routes>
       </main>
     </>

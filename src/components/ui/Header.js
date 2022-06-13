@@ -47,7 +47,7 @@ const Header = () => {
           </NavLink>
         </li>
         <li>
-          <a href="#" className={styles.btn}>
+          <a href="/signin" className={styles.btn}>
             Sign in
           </a>
         </li>
