@@ -31,6 +31,14 @@ const Header = () => {
           </NavLink>
         </li>
         <li>
+          <NavLink
+            to="/search"
+            className={(navStatus) => (navStatus.isActive ? styles.active : "")}
+          >
+            Search
+          </NavLink>
+        </li>
+        <li>
           <a href="#" className={styles.btn}>
             Sign out
           </a>
