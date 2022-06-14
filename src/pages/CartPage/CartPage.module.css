@@ -1,0 +1,86 @@
+.cart-container {
+  padding: 0 10px;
+}
+
+.cart-title {
+  max-width: fit-content;
+  margin: 45px auto;
+  font-size: 42px;
+  text-transform: uppercase;
+  color: #333;
+}
+
+.cart-header {
+  border-bottom: 1px solid #333;
+  padding-bottom: 5px;
+  margin-bottom: 15px;
+}
+
+.cart-header p {
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #d3d3d3;
+  font-size: 20px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  place-items: center;
+}
+
+.cart-footer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 18px;
+  font-weight: bold;
+  border-top: 1px solid #333;
+  padding-top: 5px;
+  margin-top: 15px;
+}
+
+.cart-control {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 25px;
+  margin-bottom: 50px;
+}
+
+.cart-control button {
+  padding: 0.5rem 1rem;
+  font-size: 1.25rem;
+  line-height: 1.5;
+  cursor: pointer;
+  border-radius: 0.3rem;
+  display: inline-block;
+  font-weight: 400;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  border: 1px solid transparent;
+  transition: color 0.15s ease-in-out;
+}
+
+.cart-control button:first-child {
+  border-color: rgb(14, 14, 103);
+  color: rgb(14, 14, 103);
+}
+
+.cart-control button:first-child:hover {
+  color: white;
+  border-color: white;
+  background-color: rgb(14, 14, 103);
+}
+
+.cart-control button:last-child {
+  border-color: crimson;
+  color: crimson;
+}
+
+.cart-control button:last-child:hover {
+  color: white;
+  border-color: white;
+  background-color: crimson;
+}

@@ -1,0 +1,74 @@
+.admin-page-title {
+  width: max-content;
+  margin: 15px auto;
+  font-size: 40px;
+  color: #333;
+  text-transform: uppercase;
+}
+.admin-sidebar {
+  max-width: 200px;
+  margin-right: 20px;
+}
+
+.admin-page {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 760px) {
+  .admin-page {
+    flex-direction: row;
+  }
+
+  .admin-products {
+    max-width: 60%;
+  }
+}
+
+.products-section {
+  margin: 1em 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1em;
+}
+/********************/
+/****** Media *******/
+/********************/
+/*SMALL*/
+@media (min-width: 760px) {
+  .products-section {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+/*MEDUIM*/
+@media (min-width: 992px) {
+  .products-section {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.profile-img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 1px solid;
+  overflow: hidden;
+}
+
+.profile-img img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.add-product-form {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1em;
+  margin-bottom: 1em;
+}
+
+.add-product-form input,
+.add-product-form select,
+.add-product-form textarea {
+  padding: 10px 20px;
+}

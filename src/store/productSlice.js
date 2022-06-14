@@ -13,6 +13,21 @@ export const getProducts = createAsyncThunk("product/getProducts", async (_,
     };
 });
 
+export const searchProduct = createAsyncThunk("product/seachProduct", async (searchParam,
+    thunkAPI) => {
+    const { rejecWithValue } = thunkAPI;
+    
+    if (searchParam === "") return [];
+    try {
+        const res = await fetch(`https://dummyjson.com/products/search?q=${searchParam}`)
+        const data = await res.json();
+        return data.products;
+    } catch (error) {
+        return rejecWithValue(error.message);
+    };
+});
+
+
 export const getProductCategories = createAsyncThunk("product/getProductCategories", async (_,
     thunkAPI) => {
     const { rejecWithValue } = thunkAPI;
@@ -30,7 +45,8 @@ export const getProductCategories = createAsyncThunk("product/getProductCategori
 const initialState = {
     isLoading: true,
     productsData: [],
-    productCategories:[],
+    productCategories: [],
+    searchData:[],
     error: null
 };
 
@@ -48,6 +64,20 @@ const productSlice = createSlice({
             state.pending = null;
         });
         builder.addCase(getProducts.rejected, (state,action) => {
+            state.isLoading = false;
+            state.error = action.payload;
+        });
+
+        //get search result
+        builder.addCase(searchProduct.pending, state => {
+            state.isLoading = true;
+        });
+        builder.addCase(searchProduct.fulfilled, (state, action) => {
+            state.searchData = action.payload;
+            state.isLoading = false;
+            state.pending = null;
+        });
+        builder.addCase(searchProduct.rejected, (state,action) => {
             state.isLoading = false;
             state.error = action.payload;
         });

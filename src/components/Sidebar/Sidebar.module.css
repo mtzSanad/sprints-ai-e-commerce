@@ -6,6 +6,7 @@
   flex-wrap: wrap;
   row-gap: 1em;
   column-gap: 2em;
+  max-width: 200px;
 }
 
 .sidebar h4 {
@@ -32,6 +33,7 @@
 
 .brand-filter .brand-check label {
   margin-left: 0.2em;
+  font-size: 14px;
 }
 
 .price-filter .price-range {
@@ -43,6 +45,7 @@
 .price-filter .price-range p {
   cursor: pointer;
   font-size: 14px;
+  margin: 5px 0;
 }
 
 .price-filter form {

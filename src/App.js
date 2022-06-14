@@ -8,6 +8,7 @@ import HomePage from "./pages/HomePage";
 import ProductPage from "./pages/ProductPage";
 import SearchPage from "./pages/SearchPage";
 import CartPage from "./pages/CartPage";
+import AdminPage from "./pages/AdminPage";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
           <Route path="/product/:productId" element={<ProductPage />} />
           <Route path="/search" element={<SearchPage />} />
           <Route path="/cart" element={<CartPage />} />
+          <Route path="/dashboard" element={<AdminPage />} />
         </Routes>
       </main>
     </>

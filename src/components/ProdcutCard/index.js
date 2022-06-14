@@ -6,7 +6,7 @@ import StarsRating from "./../StarsRating";
 import styles from "./ProductCard.module.css";
 
 
-const ProductCard = ({product,badge=""}) => {
+const ProductCard = ({product,badge="",admin=false}) => {
     const { brand, category, id, price, rating, stock, thumbnail, title } = product;
     const badgeStyle = {backgroundColor: badge=== "Hot" ? "crimson" : badge === "New" ? "green" : "orange", display: badge === "" ? "none" : "block" }
 
@@ -39,9 +39,12 @@ const ProductCard = ({product,badge=""}) => {
                     </div>
                     <div className={styles["product-link product-add-cart"]}>
                         <button>
-                            <Link to="/cart">
+                            {!admin && 
+                                <Link to="/cart">
                                 Add to cart
                             </Link>
+                            }
+                            {admin && <span>Delete</span>}
                         </button>
                     </div>
                 </div>

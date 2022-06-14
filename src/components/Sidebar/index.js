@@ -37,16 +37,15 @@ const Sidebar = ({ categories, loading }) => {
 
             </div>
 
-            <div className={styles["customer-review-filter"]}>
+            {/* <div className={styles["customer-review-filter"]}>
                 <h4>Customer Reviews</h4>
                 <span>stars</span>
                 <span>stars</span>
                 <span>stars</span>
                 <span>stars</span>
-            </div>
+            </div> */}
             
             <div className={styles["brand-filter"]}>
-                <h4>Category</h4>
                 {loading && <p>Loading</p>}
                 {categories.length > 0 &&
                     <form onSubmit={(e) => e.preventDefault()}>
@@ -78,7 +77,7 @@ const Sidebar = ({ categories, loading }) => {
             </div>
 
             <div className={styles["price-filter"]}>
-                <h4>Laptop Price</h4>
+                <h4>Price</h4>
                 <div className={styles["price-range"]}>
                     <p>Under $500</p>
                     <p>$500 to $600</p>

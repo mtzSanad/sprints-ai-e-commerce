@@ -14,7 +14,6 @@ import styles from "./Productpage.module.css";
 const ProductPage = () => {
     const { isLoading, productsData } = useSelector(state => state.product);
     const { productId } = useParams();
-    console.log(productsData);
     const { brand, category, description, discountPercentage, images, price, rating, stock, title } = productsData.find(item => item.id === parseInt(productId));
     const initImage = !isLoading ? images[0] : '';
     const [mainImage, setMainImage] = useState(initImage);
