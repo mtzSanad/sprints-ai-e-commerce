@@ -1,0 +1,269 @@
+{
+	"info": {
+		"_postman_id": "4de4e914-dcf3-48ac-b74d-f92f99ebdc93",
+		"name": "order",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "place Order Request",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2MmFhMzRmMzEyNmU3ODVlNjk4MDMzYTYiLCJpYXQiOjE2NTUzMjI4Nzg2MzAsImV4cCI6MTY1NTMyMjk2NTAzMH0.U0LMBoDuH0WDSVkpVKCQfBH61ZH3bRoO0rTO7g3EbpQFdWrYVI0W1RPrPZcSrgfhfazHLX5-DxqdlrKgBNjD6Aa9c5DBYRs2bjXqgglyEKUyH5LKUvC3XEsWqOyaKMMTpS2INRv2Cm8mDIK7chHTjCXz0SlVk4gZfVMLkL0qIjzRmxCFJFmAqk3G4lOw9f7cT_TbeTTnJXlj0708FL5xbROl5gqFlg8y9smIjJSSNVWuHSy75ZNsgQzQd_ej6AJ7s7pQjLIH7ENGbHVH1e_-LaM0aEmXJg7SW4m7N7U4L1g_KSSXtz1sXhPs_BuiFyI0x1XW7g0wh5jvcMbX50648J-UUgKZFTvRK1Rj0Ea_3VuEbhbNxMI-_DlhSGwy4reSWx72_oi70nYKZgNtnx6gJigzWDo-5I9nt2NN2S_uan7oVxBqblmbm2RsQCdRZfkb-CK3jTXHgOr8Evu8qjl9Cay6NyjJfDxPMq_gBHQuQy3ljHpFtuwFGqHB8E4vGMDwb_kqRSebWA6bOg0o0C470Zx8rhtBeQjoc_2j3BVZ4mdCWTEx3Na0KXtEbjEbN_XbGD2S84jXQEC-YSbapWuffPjbkp6aWqAyWftTDa8El-qGj5w_wdb8jrcU3IEuaAdz-6Mh65CL_DU4FgSm2adbe-MFCnPLH9qtNFWud31ZhwE",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"shippingAddress\" : \"haram streert,Giza,Egypt\",\n    \"billingAddress\":\"haram streert,Giza,Egypt\",\n    \"payment\":{\"method\":\"Cash on delivery\"},\n    \"products\":[{\"product\":\"62aa364a126e785e698033fb\",\"qty\":1, \"price\":20000},{\"product\":\"62aa3685126e785e6980341a\",\"qty\":1 , \"price\":20000}]\n    \n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://shopifyall.herokuapp.com/orders",
+					"protocol": "https",
+					"host": [
+						"shopifyall",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"orders"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get single Order Request",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2MjlkMDQyMjE1NDMzOWU1N2NhZmJiMGQiLCJpYXQiOjE2NTUyOTA0NTQ2OTIsImV4cCI6MTY1NTI5MDU0MTA5Mn0.ZoyN9da7DTJ60X8JUp4nWDNwzSfbE-bfFZSNVR7BN5fS0aZ_VUTHRzMa5LiknfGxm56IZTjUEA9OWm82pjejRcO4coSGykhrUZ6Nt7dX_Blc7DUcJZyY4kZtd_19ZYgkTOm-cp0HFo5U4K3Vit1kDyPtYDzERkyjtb-5_VmmPjjijxnnpA1s5jnnUQ3kulZ7vrK_tEf1NDl4QSfIX-dt6-uItDCzEWgxsm1hVjb_RJNluCwsNiGTs9EMnO4XNBGpUqCy230AQcCeNmZaTkfFyNIgyvwilEc1stNKb0zQyFY8oUEuo5PrM4nHFjBt0nUpEMFRJd9H89hg13K3jhoBScsoiQISEepdfNDsV4b0uZ_XCFerEzW5QO6HVOx9JVRcK9mw7ywu2a69D5YWfHMprVmgLcfjZxw-1elCVRAn8rzMDEShZe3LF8uYGjg7vR4WmfhtRMrrvxmnQba5M7vopF-6hLC3XAUECtDwnW-h3KnsLIgToZ9_IQRBAFozcDQPzsiu28tJ1Yq_EScRcDXVcg4gsp9fcyg8QdPIXzx1sxIUh6eRQQsQBeT35xi3wti5o9BFUCIlsFo5Yc7xbyR7M0Wg-YmfZF7upMkplzoAnVMPOiK1KcBI5c9iFxyAqWcuwQH71IInICjOLSMCb2jMlNdFPEFG0dq4uvkL60yBVTQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://shopifyall.herokuapp.com/orders/62a9cf1870e0d2422475099b",
+					"protocol": "https",
+					"host": [
+						"shopifyall",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"orders",
+						"62a9cf1870e0d2422475099b"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "retrieve orders request",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2MmFhMzRmMzEyNmU3ODVlNjk4MDMzYTYiLCJpYXQiOjE2NTUzMjI4Nzg2MzAsImV4cCI6MTY1NTMyMjk2NTAzMH0.U0LMBoDuH0WDSVkpVKCQfBH61ZH3bRoO0rTO7g3EbpQFdWrYVI0W1RPrPZcSrgfhfazHLX5-DxqdlrKgBNjD6Aa9c5DBYRs2bjXqgglyEKUyH5LKUvC3XEsWqOyaKMMTpS2INRv2Cm8mDIK7chHTjCXz0SlVk4gZfVMLkL0qIjzRmxCFJFmAqk3G4lOw9f7cT_TbeTTnJXlj0708FL5xbROl5gqFlg8y9smIjJSSNVWuHSy75ZNsgQzQd_ej6AJ7s7pQjLIH7ENGbHVH1e_-LaM0aEmXJg7SW4m7N7U4L1g_KSSXtz1sXhPs_BuiFyI0x1XW7g0wh5jvcMbX50648J-UUgKZFTvRK1Rj0Ea_3VuEbhbNxMI-_DlhSGwy4reSWx72_oi70nYKZgNtnx6gJigzWDo-5I9nt2NN2S_uan7oVxBqblmbm2RsQCdRZfkb-CK3jTXHgOr8Evu8qjl9Cay6NyjJfDxPMq_gBHQuQy3ljHpFtuwFGqHB8E4vGMDwb_kqRSebWA6bOg0o0C470Zx8rhtBeQjoc_2j3BVZ4mdCWTEx3Na0KXtEbjEbN_XbGD2S84jXQEC-YSbapWuffPjbkp6aWqAyWftTDa8El-qGj5w_wdb8jrcU3IEuaAdz-6Mh65CL_DU4FgSm2adbe-MFCnPLH9qtNFWud31ZhwE",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://shopifyall.herokuapp.com/orders?status=pending",
+					"protocol": "https",
+					"host": [
+						"shopifyall",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"orders"
+					],
+					"query": [
+						{
+							"key": "status",
+							"value": "pending"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete order request",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2MmE5OTE4MzJmNTA0YmMxZjE1Y2E0ZjAiLCJpYXQiOjE2NTUzMjE1ODQ4MzgsImV4cCI6MTY1NTMyMTY3MTIzOH0.PfjB8zAQhWFVOFD2_BVKeC9B-dKzY6PEjJGxs4znZeFk-LbkN97WjWvXoF8WBI9lOYspqaXiSO6NdalF13eZhPdHYeTj1NZ7lqXE_wyY2P8k0EBSoPQ04iALAJWxXLd8CXVAoBziKpUb-_S1mWbmmiRJR1ilkZLyIyNAcUng3S1Tekt7hiuSsdGrUvGBFGgGfrPyWup8zBE2go9eNb-WaQ4wNTAdMxjix0Xn8o1plnfFRCtGrqFlcP_3tdLHTXQKO-lH6nh6jspBrp0peVFCOOAvtfhShXVbXzhAdpbbwZ2ZLjhW4wI8xbiItMiNBNsF0kN7KUIsTDy4nt_GnmkdLgHRyODQP6A65QsayHkqPcCU6DEooWDZv-hM4vmmyVP4G5cULaMru305q2JA9RVqbdKUbxswfF4TzkaO2dmhIWI-lk54UZoPCmNXfSA0v7T-8f6NWef7tsrkvRlDaULfJZxCo_qlaQ1D2kN-P0HZSyqGDqK_qaYMsjred-BrXf_TvkJQ8QhEgh0BygVcuROYjR4WZI0pt38eu_T339OTvULTkWb9Hex8HK8zegEi1dupU1fEHHnx2myCM1ofPF7H2jEmh2pbrr1V_vNmtFz2lm8TNGb1esABXSPwzUVxytzTBRGrKkJDqssIz5Q8SGrH5JOfyICEEttnE4dI81pkvTc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://shopifyall.herokuapp.com/orders/62a9cabd9192e9f36bbc7589",
+					"protocol": "https",
+					"host": [
+						"shopifyall",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"orders",
+						"62a9cabd9192e9f36bbc7589"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update Order Request",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2MmE5OTE4MzJmNTA0YmMxZjE1Y2E0ZjAiLCJpYXQiOjE2NTUyOTEzODgzNDksImV4cCI6MTY1NTI5MTQ3NDc0OX0.bnJWaCKsm30rXfoqXT8BzXa3Fi_h1LK6kgOiyqVgbvna-Y8W9hXdKppDW1q5WoDz6C9Mpbja6qpkgkx0yUo2vvNQnE2wNzoQbpH7YU5uqR3V5gdfeJnnpAiumZcbylpcV54LntmH_I30_unnhk289ueqsPel12dufSS7eTeX1F_KHVZ11MPjjbWxH4qe4P1OnFFPw9I50VXZ2DZ5w3bAyolDbMDYCpUg7wWCaNDFu3UaQncuIBFZx-FdI9tAsfm7nEXZ8kdFbr-aqv0ykApSi6GESZifeC2ALEZcdrK2USyWcICFUwpMxwlTWt695aNykso6isfMFSCSU82XA8sz9mTFbFIcy0BZz1h1cLwqA_zRq_LIfOMrYOdvn33J6Ugrlf82ne1ETl3IqLaKtjLm1QvfREG8g_x22F6WqTtu0Mp_70g72g-IHk5LZz8kvXxUqinSPGp7f2keg8RlMu0dHac4b7mNRpqjJQI7dkXa4dW5YXlbTsZh2Ff2mZN-DROTOonghZ85F3CzXxWFHnZMGKdrDo454pXSQYWX9YmuFzU9ThjOI6EOAb9Zet13bh6JFeFhkwYo4QZ1Vm5Z-WMFj6wdFZUChdN2_pnaHeATSZT8ey-tf6Ym1woq7zhCe2VvVH_YiKVxW6bSJZRpIdJN3grXdW9K3hILuefxD8apd1Y",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \n    \"products\":[{\"product\":\"62a20603c902b9e1ba893e0e\",\"qty\":0 , \"price\":30000},{\"product\":\"62a20611c902b9e1ba893e14\",\"qty\":2, \"price\":30000},{\"product\":\"62a2061cc902b9e1ba893e19\",\"qty\":1, \"price\":30000}]\n    \n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://shopifyall.herokuapp.com/orders/62a9d51ead72e3578856294e/updateProducts",
+					"protocol": "https",
+					"host": [
+						"shopifyall",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"orders",
+						"62a9d51ead72e3578856294e",
+						"updateProducts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update order status request",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2MjlkMDQyMjE1NDMzOWU1N2NhZmJiMGQiLCJpYXQiOjE2NTUxOTM5ODk3NDQsImV4cCI6MTY1NTE5NDA3NjE0NH0.CMdOGg8bEPA0vZkoZ1Du30KNO182OohPkbdxjOby-xVeW66AVpoCYlL-CeXk-P3F56ccp7FQ93pKkU4M6oFyZMma3KPNKtnmsy3H2cWFmPnko1LkHxU0Tca2I2Db28Wl8t7R-ukmCt5G7RHlOpCOGuUt5q5VtqiSnRKvAwLe3DI4qwDNR9rNuit0gPDlqlX9bnidI7ajsNvd-uPs9mfddw3bJSIjC0D5o0yfyah7c7edHfjje9HulxU5zsZQQysBc0ly-IO7RjAkP2av81htpT3QoIKXgTLxzjmbHZthqxkXoeJW92Qt9o7yPObc_sx3GrGo_US7gBztWQanaRf08sGu63tiTYfVZ1jg49DoLz4xASTHXMtyqIGSxpPBmRz-MSLphgqcariMeLSvmYkb1T73yU3e-9zD4OjGzQSE3wXppRMsDMAUzG1tFhgLkrSgk9dajzSLUXnpFEPYV7vdfkodT1kOVi5I5n0mjr7qLy7GGhgEzC8A_mtQXK0UPvsb8xhv5_SgQV2wc1SRTqPOW6zg1HjjOl-ha3BDEJCXEuRrjzTDx-dt9wgs9BE9-gpgqBNPM3j8gBnL_6GlPs-9XHxcOGzeTxhorxds56ZNknxlPFZajiEH7Fd9SnyVWgydtqWvs8Vx8aBtMyUwf_u2v1bb3LrGWFj91w1XFWXAHiw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"status\":\"in review\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://shopifyall.herokuapp.com/orders/62a9be3865e5693631ec4f13/updateStatus",
+					"protocol": "https",
+					"host": [
+						"shopifyall",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"orders",
+						"62a9be3865e5693631ec4f13",
+						"updateStatus"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "review order request",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2MmFhMzRmMzEyNmU3ODVlNjk4MDMzYTYiLCJpYXQiOjE2NTUzMjI4Nzg2MzAsImV4cCI6MTY1NTMyMjk2NTAzMH0.U0LMBoDuH0WDSVkpVKCQfBH61ZH3bRoO0rTO7g3EbpQFdWrYVI0W1RPrPZcSrgfhfazHLX5-DxqdlrKgBNjD6Aa9c5DBYRs2bjXqgglyEKUyH5LKUvC3XEsWqOyaKMMTpS2INRv2Cm8mDIK7chHTjCXz0SlVk4gZfVMLkL0qIjzRmxCFJFmAqk3G4lOw9f7cT_TbeTTnJXlj0708FL5xbROl5gqFlg8y9smIjJSSNVWuHSy75ZNsgQzQd_ej6AJ7s7pQjLIH7ENGbHVH1e_-LaM0aEmXJg7SW4m7N7U4L1g_KSSXtz1sXhPs_BuiFyI0x1XW7g0wh5jvcMbX50648J-UUgKZFTvRK1Rj0Ea_3VuEbhbNxMI-_DlhSGwy4reSWx72_oi70nYKZgNtnx6gJigzWDo-5I9nt2NN2S_uan7oVxBqblmbm2RsQCdRZfkb-CK3jTXHgOr8Evu8qjl9Cay6NyjJfDxPMq_gBHQuQy3ljHpFtuwFGqHB8E4vGMDwb_kqRSebWA6bOg0o0C470Zx8rhtBeQjoc_2j3BVZ4mdCWTEx3Na0KXtEbjEbN_XbGD2S84jXQEC-YSbapWuffPjbkp6aWqAyWftTDa8El-qGj5w_wdb8jrcU3IEuaAdz-6Mh65CL_DU4FgSm2adbe-MFCnPLH9qtNFWud31ZhwE",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"review\":\"the order is very good\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://shopifyall.herokuapp.com/orders/62aa399c864c934ee6bb5691/Review",
+					"protocol": "https",
+					"host": [
+						"shopifyall",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"orders",
+						"62aa399c864c934ee6bb5691",
+						"Review"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -1,0 +1,468 @@
+{
+	"info": {
+		"_postman_id": "07694ede-76d1-4e73-a280-74b9f25b7f7a",
+		"name": "Authentication",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Register With no data",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "https://shopifyall.herokuapp.com/register",
+					"protocol": "https",
+					"host": [
+						"shopifyall",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Register already existing user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\":\"shaimaaKamal\",\n    \"email\":\"shaimaakamal36@gmail.com\",\n    \"password\":\"Omarahmed\",\n    \"phone\":\"01020414320\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://shopifyall.herokuapp.com/register",
+					"protocol": "https",
+					"host": [
+						"shopifyall",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Register user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\":\"reemahmed\",\n    \"email\":\"reem@gmail.com\",\n    \"password\":\"Hossam303\",\n    \"phone\":\"01040434325\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://shopifyall.herokuapp.com/register",
+					"protocol": "https",
+					"host": [
+						"shopifyall",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login with no credentials",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://shopifyall.herokuapp.com/login",
+					"protocol": "https",
+					"host": [
+						"shopifyall",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login unexisting user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\":\"kareem@gmail.com\",\n    \"password\":\"hossam303\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://shopifyall.herokuapp.com/login",
+					"protocol": "https",
+					"host": [
+						"shopifyall",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login with wrong credientials",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\":\"shaimaakamal36@gmail.com\",\n    \"password\":\"ahmedmohamdd\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://shopifyall.herokuapp.com/login",
+					"protocol": "https",
+					"host": [
+						"shopifyall",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Successful login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\":\"taha@gmail.com\",\n    \"password\":\"Hossam303\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://shopifyall.herokuapp.com/login",
+					"protocol": "https",
+					"host": [
+						"shopifyall",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get Profile Request",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2MmE5OTE4MzJmNTA0YmMxZjE1Y2E0ZjAiLCJpYXQiOjE2NTUyODQ5ODAwOTUsImV4cCI6MTY1NTI4NTA2NjQ5NX0.Tt1kfeQO140pcys8IYMWauGB1sLr2xCWIoVqRqG5xxXghVIZAbLnUAf-tHCw-KxfFjZ_rAEUTapjMdvGnsR2mo16BM15aDkxRc9ZuP0K14CsOnYBGIwW1raUhTmPg361j8Plk-70FjgdR4rtY6XRCYVBJY8UKtMY7BEhGvpA7lDwXVcQx5k6opEeCLQnad4M_eAtf8V-qLvZ3nasWzfCkiF8P6aB1-TtacRoPThJkk4Qx7URWZYBS1MnhEPrRWUjgxRYl4XE3GiRKeS1sWtNqMf4bJlIDPFsDUVLX_XRytmxGZhgOsszQrk0OoulbZrrOIV9RYrC_Xv56BAIh5dJxjO8ORlh000qmTu1ohD0VTwK656I4UoTaQaZk3av3ejgGA7fPLjrAYjFHw5aAwwjNE1aoTvsJfQGAMao_zzxlF0yNGiqabs8RRL_mH5RHphbUeYsFECfTuHEdWGghC7tKahgBvYxmIXgQQSiZNDsgCzwghwZ7wAZi5Gom-NODWQSvDPqh1SAtR7qScU3dsB14nI_0LOmOMiYvhafGLwWMl0k8StBSRDp5msZs_BgosA6C5f9kLS62dX0hVAK_ozQyR3XQbyqN5tpGfDzDhOvh5y0wqGXhu3F4wC_XfiArKW5mV3rYL_KhZCt1q49yUdOmHms90yeiJPq010hfOJb0Uw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://shopifyall.herokuapp.com/profile",
+					"protocol": "https",
+					"host": [
+						"shopifyall",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"profile"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "unauthorize profile",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://shopifyall.herokuapp.com/profile",
+					"protocol": "https",
+					"host": [
+						"shopifyall",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"profile"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get users by regular user",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2MmE5OTE4MzJmNTA0YmMxZjE1Y2E0ZjAiLCJpYXQiOjE2NTUyODA0MjI2MTksImV4cCI6MTY1NTI4MDUwOTAxOX0.gDkoTAjhmzR26Y3R9wSlAFKpV0LVRdwwMmKzlGCqTFcT0-6WFfSBgPuZhlvyAaebQAam7_z6Ps1eeFpd6uhiMSNz9ygJuiyOGPeWVBAQDk6tNF2WMt111tlCwzH-VBxNuCb44kdy-6KBGA_DzKf6QKLP0LbTFDIKN9hhPrZ2y3rmPPaPaIHkwuaRYi_3RrMETjpoLeykmiVN9cQ2dhUw5pQmE_RsWh1y3DOV9nN0QUn3kNBRtALLN4qmwrgj_snJKS9vcYgKRfumKARtwPmcboqepmdLVPoq4rRDbfJ7ASciNQm64-yY5mPDquw97UaEChK2qcnqc4rNwxoWV2K_4ToVp8hF_57Xx90M-S5VSEqIbpieryNtE6EuQ8nsA9fEY1r_FL1wJZiKZxS94FqDKJSxo4BuRG9qvoCTga5yzaEJY6ZluWGnAavMVEsXAQYC4CjlhiSQQXdeigt_n9-pThmA2n279ZtRY0DL2EHQI_L-EBPSWvn1B9p5369d1jK7WjIGL0lghbOTztqnZ5-TBfIYuWUo7F4qb3ifmPlr0sboeaSkJ8XIAbVLwj2oNylLwT2l-8obsVYWphzUlyQAR-QLVtFkqaSzpFnS1kdoyLfGW-9OPwL2cTsAx7gcT_egtFCjPGXXfZ9GYtGL2vB9k9WZeqpXSP78Xy_U1dc-ySA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://shopifyall.herokuapp.com/users",
+					"protocol": "https",
+					"host": [
+						"shopifyall",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "successful users retrive",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2MmFhMzRlNzEyNmU3ODVlNjk4MDMzYTAiLCJpYXQiOjE2NTUzMjE5NDUzNTMsImV4cCI6MTY1NTMyMjAzMTc1M30.gMZM29bn_J9xXLyJdb6ZYO9vfel-GWjbTvhvbKgfTYi1wSYvis_cb2uQIkre-f0xkf8EmyBPNE9Szg29usYh2Gq-1seyqqBaVLF_s75spODN0t3LdNqlRsoRztUkDZUYw-aRe-MOScJlFpAG5xhaudtcM_Oz5-AAsCVRD-3zV4rB3-e5QY11q92p_OsXX4zJKY39uJvfB22Yv7TvMyflDW0yHneecM47lVZmSYSNpjw8lwpsehmj4FhOMe9PPoPHCo8Mr1WtZep9CL7UzpJE8Ma6bwRUXDwB6_JxA4GC2iP_VK9ONMYsXBfQTll1i9XdY2Mr04hKRWddlWRGNUfvIkdAEnNns7rF29hmPHA-RS23Z3MmipLnNPDiw2N-S3wJu3A-b5BH8HR8JwJJVgcnaRXu8wlRe_GiwZdNAl4ovi6qzG4tyl8An0BhU3bVPqDHOGz1o9iB1ecydV7OCljuqNHgHIVJnJa-fJRUkV-_x6zHOWgntFTOLRFGla_gb57vuYTAstOf4Q0A0gJJdNOv5v7Txc1HayPNKvmgiBFvz9Ot9Mn86X_xKkew1io4oCJsy1ozzvi0AjrQj7hYkbe8zbZmkrnaWQ0VcYjzD2ksJswz2xSAg2tQA6tgeMvUGBg57_9BUzLZD0ykzotZZRKOc8lYHOwKI4ot_sV_zXACnOs",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://shopifyall.herokuapp.com/users?creationDate=2022-06-15",
+					"protocol": "https",
+					"host": [
+						"shopifyall",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"users"
+					],
+					"query": [
+						{
+							"key": "creationDate",
+							"value": "2022-06-15"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "forget password request",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\":\"reem@gmail.com\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://shopifyall.herokuapp.com/forgetPassword",
+					"protocol": "https",
+					"host": [
+						"shopifyall",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"forgetPassword"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "change Password Request",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2MjlkMDQyMjE1NDMzOWU1N2NhZmJiMGQiLCJpYXQiOjE2NTQ1NTIzOTUzNjMsImV4cCI6MTY1NDU1MjQ4MTc2M30.IRApnjPv24rNPoEzCErZiCc1lGNNZ-RfssgkxVYkaNiPf0z2jyDmUqtnmskyzdB1nDMukBYMO65zVypBWg_JchFf0nB1rSuCgrkUNh87eMeLMzOY8OZl0NQXSRKML_uAJdZNJseanQBHb2KCBDn5TGKAQDLdAJTBO5QwX-y2wkgRR9TLyD0pf8KxCNZd9bzGPq8VX3CHMhGGZoZpMoTdrCINGXmzFWNbiqe0YPm5LjmF1-E5TED_A5937mHAP5JOCEASv6hgGbhEjwPOZMbF1sgr3u9GPvZbZqwPqr2-OHeCHFacUVnkQCrl9ANyfIsEerITc-kyKTbjyuzre502ZzoSobRGFzKDCR0CkVCDNN3mioHAGkU0hTFNmA5kRLW9gZLmsoIQyOkjKIojAo80pdkFqjbsi1b70L168cmQUHwd9y_rChPHHhiphNhqz-8YaQKrXckzZvz4Xl3qSKshOhx_WD6dCKjAmx3lAP6d4kGpjTqFxcNH1IidFZrlbDew6wqeIU3uYqe5zpIu2EGxCmoUwZi1mPLkXOX9FfKEuLySpjzqukVhaF40RN_aa5tLahzRXTeff1Uf8x7z0ZcF2zEwiAwek2p9qjCccjRzvISayBNwEu32kJyncLU1BcjjdJ4yQ2tVNrFkS8w7GwNoYMkILKismOPHezWxvte64f4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{   \n     \"oldPassword\":\"Hossam303\",\n    \"newPassword\":\"shimaakamal34\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://shopifyall.herokuapp.com/changePassword?userId=62a991832f504bc1f15ca4f0",
+					"protocol": "https",
+					"host": [
+						"shopifyall",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"changePassword"
+					],
+					"query": [
+						{
+							"key": "userId",
+							"value": "62a991832f504bc1f15ca4f0"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "successfull reset password",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"password\":\"Hossam303\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://shopifyall.herokuapp.com/resetPassword?userId=62a991832f504bc1f15ca4f0",
+					"protocol": "https",
+					"host": [
+						"shopifyall",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"resetPassword"
+					],
+					"query": [
+						{
+							"key": "userId",
+							"value": "62a991832f504bc1f15ca4f0"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update user status request",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2MjlkMDQyMjE1NDMzOWU1N2NhZmJiMGQiLCJpYXQiOjE2NTUyMTI4OTg2MDYsImV4cCI6MTY1NTIxMjk4NTAwNn0.PXwd60qCCrEB1SQMctb5tEUEnKGbbzrGWxDRm5XCKFJVvq2DwB4UZ_RqZC19E6h_7gTAEwAzvnz_8kuRzCg4s4zoPJ_TCmEuUKx_EqroyA8dWXFl5N030vQ_5AbpnTWeraDVwxbJf6lstHW3pKv4rBZKI53QuZoO1I_YcWTtizdLqeSjGYOUd30J9Uy4n8ypSPY2zdz8kxRRd02Ri0bilwvuwj8FFJT_Ejxe1ZxBMOPc_P0oz0STExMSoWa-j-eSo0et2hcTpq_yqNfZI-jlyD6gVdAKK_OqWgKadd8K3hcbi5o1XeyKTRO3mqoGgxPm2feSEPPz4tZZlcdpTh998dj2qt8jcIiZkZNwnm-p17i8czCgfeEco-Hp_9f0MZcfP5s9pxBmFQLT3YL7E7hjJnOKMbd5hvNBPlydI_PeTjGlH1aFQNR3cf8bp-LJNhOugRqZ1l4MHWLhWsqk6uIFbyT8NazqU4kXmo_3q96I1PZMQgA1GmrIyteHbxflaB2d_Yz8Zfdp4YhhsnX7Za0p44wuTXB8JSz09q-tli3JnjDE7ENJ4LBRWaBSRwc3ldSY11eXV-WEdILBeawdFsRqd7vhOQNWdMl8H6O3McEIywA0d3LM3jHTnjw1J1QUhrkPFwLqwuBhtiKRwhc8c5_UhHw_bzBxscl7wW760VZ5SL4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"status\":\"active\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://shopifyall.herokuapp.com/62a991832f504bc1f15ca4f0/updateUserStatus",
+					"protocol": "https",
+					"host": [
+						"shopifyall",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"62a991832f504bc1f15ca4f0",
+						"updateUserStatus"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

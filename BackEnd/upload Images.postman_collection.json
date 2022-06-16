@@ -1,0 +1,60 @@
+{
+	"info": {
+		"_postman_id": "d95bfa26-59be-41a3-b0de-e6dab3c98134",
+		"name": "upload Images",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Images upload Request",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2MmFhMzRlNzEyNmU3ODVlNjk4MDMzYTAiLCJpYXQiOjE2NTUzODI1MjA2MTIsImV4cCI6MTY1NTM4MjYwNzAxMn0.NB-m6YEbETVlfodsjxLjK2MShGeXFcGmU9FeUKWYwpCmnW6sZLfRjz_swLX9m5Lj5b417ZUPKF85ON0Exh2GYwDPbjJeauz1mcirpgliKvAxnrJVs6h9luq65uZOqgX_gOygv9273T2UFi1gs2s71t_0250LslQL54WJyuqlllU1NbqZwU5cTx-M08fDnEozbxyFNnVeeb-PtvnUrnYBs9XPke0Q8Sv4wNx6_HwQ7kuI68QStr19IbzKMaJ-H8dDXtwQK-2oKOIuwu-JbzWqqNy0cDHGjOaojPzwSkV4cbGNy082s4FEWzW5GoZDg8AFV6hr8EonlOnJNVs9OkP_BhaQVL38YqkkTbZnq_iS0FmLUFkFP2PeqLMGf9FSGsnCcmuhLLkPs3eJHUlspPGIv6d3XUhfzA9_cJzIsi5dev0a8oLqhGg8Rc8JWn1BzUhTY2Iit8hDiH88HuCNXpcS2e9qhwOhwiE3d1qXjOpS4Tdzc6ekzKWvZX3PCzwpIHl3lbQmo9s-g9rXX9ysqLV2Px-iei-3KT88jHGXGZG_Mw-7QIKf4CHmFoDonX8IsSYCz5fJ-sfeYbnqGYQVyaiCpx0EgwlTZkeIjd0uuJbtqIgklX17KVYYYHdnc3PgefoYYBwXxCdXvOr_4Sobxvk8mCf4ssp0a7dW63oCGpCgoHM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "images",
+							"type": "file",
+							"src": "/Users/shaimaakamal/Desktop/download.png"
+						},
+						{
+							"key": "imageFolder",
+							"value": "Brands",
+							"type": "default"
+						},
+						{
+							"key": "folderImageId",
+							"value": "62aa3579126e785e698033c0",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://shopifyall.herokuapp.com/images/upload",
+					"protocol": "https",
+					"host": [
+						"shopifyall",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"images",
+						"upload"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

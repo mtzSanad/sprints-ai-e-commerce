@@ -1,0 +1,80 @@
+{
+	"info": {
+		"_postman_id": "b58a79dc-d7f1-4871-a4c1-f836cb1bfd54",
+		"name": "Review",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "add Review Request",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2MmFhMzRmMzEyNmU3ODVlNjk4MDMzYTYiLCJpYXQiOjE2NTUzMjI4Nzg2MzAsImV4cCI6MTY1NTMyMjk2NTAzMH0.U0LMBoDuH0WDSVkpVKCQfBH61ZH3bRoO0rTO7g3EbpQFdWrYVI0W1RPrPZcSrgfhfazHLX5-DxqdlrKgBNjD6Aa9c5DBYRs2bjXqgglyEKUyH5LKUvC3XEsWqOyaKMMTpS2INRv2Cm8mDIK7chHTjCXz0SlVk4gZfVMLkL0qIjzRmxCFJFmAqk3G4lOw9f7cT_TbeTTnJXlj0708FL5xbROl5gqFlg8y9smIjJSSNVWuHSy75ZNsgQzQd_ej6AJ7s7pQjLIH7ENGbHVH1e_-LaM0aEmXJg7SW4m7N7U4L1g_KSSXtz1sXhPs_BuiFyI0x1XW7g0wh5jvcMbX50648J-UUgKZFTvRK1Rj0Ea_3VuEbhbNxMI-_DlhSGwy4reSWx72_oi70nYKZgNtnx6gJigzWDo-5I9nt2NN2S_uan7oVxBqblmbm2RsQCdRZfkb-CK3jTXHgOr8Evu8qjl9Cay6NyjJfDxPMq_gBHQuQy3ljHpFtuwFGqHB8E4vGMDwb_kqRSebWA6bOg0o0C470Zx8rhtBeQjoc_2j3BVZ4mdCWTEx3Na0KXtEbjEbN_XbGD2S84jXQEC-YSbapWuffPjbkp6aWqAyWftTDa8El-qGj5w_wdb8jrcU3IEuaAdz-6Mh65CL_DU4FgSm2adbe-MFCnPLH9qtNFWud31ZhwE",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"review\":\"this is an excellent one\",\n    \"rate\":5,\n    \"product\":\"62aa364a126e785e698033fb\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://shopifyall.herokuapp.com/reviews",
+					"protocol": "https",
+					"host": [
+						"shopifyall",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"reviews"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "successful product reviews retrieve",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"product\":\"62a20603c902b9e1ba893e0e\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://shopifyall.herokuapp.com/reviews",
+					"protocol": "https",
+					"host": [
+						"shopifyall",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"reviews"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

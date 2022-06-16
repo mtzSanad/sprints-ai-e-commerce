@@ -1,0 +1,170 @@
+{
+	"info": {
+		"_postman_id": "38fff44c-8533-4967-af19-60e5519e26d9",
+		"name": "Brand",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "successful add brand",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2MmFhMzRlNzEyNmU3ODVlNjk4MDMzYTAiLCJpYXQiOjE2NTUzMjE5NDUzNTMsImV4cCI6MTY1NTMyMjAzMTc1M30.gMZM29bn_J9xXLyJdb6ZYO9vfel-GWjbTvhvbKgfTYi1wSYvis_cb2uQIkre-f0xkf8EmyBPNE9Szg29usYh2Gq-1seyqqBaVLF_s75spODN0t3LdNqlRsoRztUkDZUYw-aRe-MOScJlFpAG5xhaudtcM_Oz5-AAsCVRD-3zV4rB3-e5QY11q92p_OsXX4zJKY39uJvfB22Yv7TvMyflDW0yHneecM47lVZmSYSNpjw8lwpsehmj4FhOMe9PPoPHCo8Mr1WtZep9CL7UzpJE8Ma6bwRUXDwB6_JxA4GC2iP_VK9ONMYsXBfQTll1i9XdY2Mr04hKRWddlWRGNUfvIkdAEnNns7rF29hmPHA-RS23Z3MmipLnNPDiw2N-S3wJu3A-b5BH8HR8JwJJVgcnaRXu8wlRe_GiwZdNAl4ovi6qzG4tyl8An0BhU3bVPqDHOGz1o9iB1ecydV7OCljuqNHgHIVJnJa-fJRUkV-_x6zHOWgntFTOLRFGla_gb57vuYTAstOf4Q0A0gJJdNOv5v7Txc1HayPNKvmgiBFvz9Ot9Mn86X_xKkew1io4oCJsy1ozzvi0AjrQj7hYkbe8zbZmkrnaWQ0VcYjzD2ksJswz2xSAg2tQA6tgeMvUGBg57_9BUzLZD0ykzotZZRKOc8lYHOwKI4ot_sV_zXACnOs",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\":\"infinx\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://shopifyall.herokuapp.com/brands",
+					"protocol": "https",
+					"host": [
+						"shopifyall",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"brands"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "successful brands retreieve",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://shopifyall.herokuapp.com/brands",
+					"protocol": "https",
+					"host": [
+						"shopifyall",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"brands"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "successful brand retreive",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2MjlkMDQyMjE1NDMzOWU1N2NhZmJiMGQiLCJpYXQiOjE2NTQ1NTIzOTUzNjMsImV4cCI6MTY1NDU1MjQ4MTc2M30.IRApnjPv24rNPoEzCErZiCc1lGNNZ-RfssgkxVYkaNiPf0z2jyDmUqtnmskyzdB1nDMukBYMO65zVypBWg_JchFf0nB1rSuCgrkUNh87eMeLMzOY8OZl0NQXSRKML_uAJdZNJseanQBHb2KCBDn5TGKAQDLdAJTBO5QwX-y2wkgRR9TLyD0pf8KxCNZd9bzGPq8VX3CHMhGGZoZpMoTdrCINGXmzFWNbiqe0YPm5LjmF1-E5TED_A5937mHAP5JOCEASv6hgGbhEjwPOZMbF1sgr3u9GPvZbZqwPqr2-OHeCHFacUVnkQCrl9ANyfIsEerITc-kyKTbjyuzre502ZzoSobRGFzKDCR0CkVCDNN3mioHAGkU0hTFNmA5kRLW9gZLmsoIQyOkjKIojAo80pdkFqjbsi1b70L168cmQUHwd9y_rChPHHhiphNhqz-8YaQKrXckzZvz4Xl3qSKshOhx_WD6dCKjAmx3lAP6d4kGpjTqFxcNH1IidFZrlbDew6wqeIU3uYqe5zpIu2EGxCmoUwZi1mPLkXOX9FfKEuLySpjzqukVhaF40RN_aa5tLahzRXTeff1Uf8x7z0ZcF2zEwiAwek2p9qjCccjRzvISayBNwEu32kJyncLU1BcjjdJ4yQ2tVNrFkS8w7GwNoYMkILKismOPHezWxvte64f4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://shopifyall.herokuapp.com/brands/62a9d8f276647f5fe8f1319d",
+					"protocol": "https",
+					"host": [
+						"shopifyall",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"brands",
+						"62a9d8f276647f5fe8f1319d"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "successful brand deletion",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2MjlkMDQyMjE1NDMzOWU1N2NhZmJiMGQiLCJpYXQiOjE2NTQ1NTIzOTUzNjMsImV4cCI6MTY1NDU1MjQ4MTc2M30.IRApnjPv24rNPoEzCErZiCc1lGNNZ-RfssgkxVYkaNiPf0z2jyDmUqtnmskyzdB1nDMukBYMO65zVypBWg_JchFf0nB1rSuCgrkUNh87eMeLMzOY8OZl0NQXSRKML_uAJdZNJseanQBHb2KCBDn5TGKAQDLdAJTBO5QwX-y2wkgRR9TLyD0pf8KxCNZd9bzGPq8VX3CHMhGGZoZpMoTdrCINGXmzFWNbiqe0YPm5LjmF1-E5TED_A5937mHAP5JOCEASv6hgGbhEjwPOZMbF1sgr3u9GPvZbZqwPqr2-OHeCHFacUVnkQCrl9ANyfIsEerITc-kyKTbjyuzre502ZzoSobRGFzKDCR0CkVCDNN3mioHAGkU0hTFNmA5kRLW9gZLmsoIQyOkjKIojAo80pdkFqjbsi1b70L168cmQUHwd9y_rChPHHhiphNhqz-8YaQKrXckzZvz4Xl3qSKshOhx_WD6dCKjAmx3lAP6d4kGpjTqFxcNH1IidFZrlbDew6wqeIU3uYqe5zpIu2EGxCmoUwZi1mPLkXOX9FfKEuLySpjzqukVhaF40RN_aa5tLahzRXTeff1Uf8x7z0ZcF2zEwiAwek2p9qjCccjRzvISayBNwEu32kJyncLU1BcjjdJ4yQ2tVNrFkS8w7GwNoYMkILKismOPHezWxvte64f4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://shopifyall.herokuapp.com/brands/629fcc2531b7ed9968eef1da",
+					"protocol": "https",
+					"host": [
+						"shopifyall",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"brands",
+						"629fcc2531b7ed9968eef1da"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "successful brand update",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2MjlkMDQyMjE1NDMzOWU1N2NhZmJiMGQiLCJpYXQiOjE2NTQ1NTIzOTUzNjMsImV4cCI6MTY1NDU1MjQ4MTc2M30.IRApnjPv24rNPoEzCErZiCc1lGNNZ-RfssgkxVYkaNiPf0z2jyDmUqtnmskyzdB1nDMukBYMO65zVypBWg_JchFf0nB1rSuCgrkUNh87eMeLMzOY8OZl0NQXSRKML_uAJdZNJseanQBHb2KCBDn5TGKAQDLdAJTBO5QwX-y2wkgRR9TLyD0pf8KxCNZd9bzGPq8VX3CHMhGGZoZpMoTdrCINGXmzFWNbiqe0YPm5LjmF1-E5TED_A5937mHAP5JOCEASv6hgGbhEjwPOZMbF1sgr3u9GPvZbZqwPqr2-OHeCHFacUVnkQCrl9ANyfIsEerITc-kyKTbjyuzre502ZzoSobRGFzKDCR0CkVCDNN3mioHAGkU0hTFNmA5kRLW9gZLmsoIQyOkjKIojAo80pdkFqjbsi1b70L168cmQUHwd9y_rChPHHhiphNhqz-8YaQKrXckzZvz4Xl3qSKshOhx_WD6dCKjAmx3lAP6d4kGpjTqFxcNH1IidFZrlbDew6wqeIU3uYqe5zpIu2EGxCmoUwZi1mPLkXOX9FfKEuLySpjzqukVhaF40RN_aa5tLahzRXTeff1Uf8x7z0ZcF2zEwiAwek2p9qjCccjRzvISayBNwEu32kJyncLU1BcjjdJ4yQ2tVNrFkS8w7GwNoYMkILKismOPHezWxvte64f4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\":\"samsung\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://shopifyall.herokuapp.com/brands/62a9d8f276647f5fe8f1319d",
+					"protocol": "https",
+					"host": [
+						"shopifyall",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"brands",
+						"62a9d8f276647f5fe8f1319d"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

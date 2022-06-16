@@ -1,0 +1,261 @@
+{
+	"info": {
+		"_postman_id": "17cab4fc-4be6-4370-9d95-aed9ce40840f",
+		"name": "Product",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "succeffull add product",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2MmFhMzRlNzEyNmU3ODVlNjk4MDMzYTAiLCJpYXQiOjE2NTUzMjE5NDUzNTMsImV4cCI6MTY1NTMyMjAzMTc1M30.gMZM29bn_J9xXLyJdb6ZYO9vfel-GWjbTvhvbKgfTYi1wSYvis_cb2uQIkre-f0xkf8EmyBPNE9Szg29usYh2Gq-1seyqqBaVLF_s75spODN0t3LdNqlRsoRztUkDZUYw-aRe-MOScJlFpAG5xhaudtcM_Oz5-AAsCVRD-3zV4rB3-e5QY11q92p_OsXX4zJKY39uJvfB22Yv7TvMyflDW0yHneecM47lVZmSYSNpjw8lwpsehmj4FhOMe9PPoPHCo8Mr1WtZep9CL7UzpJE8Ma6bwRUXDwB6_JxA4GC2iP_VK9ONMYsXBfQTll1i9XdY2Mr04hKRWddlWRGNUfvIkdAEnNns7rF29hmPHA-RS23Z3MmipLnNPDiw2N-S3wJu3A-b5BH8HR8JwJJVgcnaRXu8wlRe_GiwZdNAl4ovi6qzG4tyl8An0BhU3bVPqDHOGz1o9iB1ecydV7OCljuqNHgHIVJnJa-fJRUkV-_x6zHOWgntFTOLRFGla_gb57vuYTAstOf4Q0A0gJJdNOv5v7Txc1HayPNKvmgiBFvz9Ot9Mn86X_xKkew1io4oCJsy1ozzvi0AjrQj7hYkbe8zbZmkrnaWQ0VcYjzD2ksJswz2xSAg2tQA6tgeMvUGBg57_9BUzLZD0ykzotZZRKOc8lYHOwKI4ot_sV_zXACnOs",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"productname\":\"Samsung A22\",\n    \"price\":\"20000\",\n    \"qty\":2,\n    \"description\":\"New phone\",\n    \"category\":\"62aa35a2126e785e698033cf\",\n    \"brand\":\"62aa357f126e785e698033c5\"\n    \n\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://shopifyall.herokuapp.com/products",
+					"protocol": "https",
+					"host": [
+						"shopifyall",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "successfull products retreive",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://shopifyall.herokuapp.com/products",
+					"protocol": "https",
+					"host": [
+						"shopifyall",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "successful single product retreive",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://shopifyall.herokuapp.com/products/62aa36eb126e785e6980342e",
+					"protocol": "https",
+					"host": [
+						"shopifyall",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"products",
+						"62aa36eb126e785e6980342e"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "successful product deletion",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2MmFhMzRlNzEyNmU3ODVlNjk4MDMzYTAiLCJpYXQiOjE2NTUzMjE5NDUzNTMsImV4cCI6MTY1NTMyMjAzMTc1M30.gMZM29bn_J9xXLyJdb6ZYO9vfel-GWjbTvhvbKgfTYi1wSYvis_cb2uQIkre-f0xkf8EmyBPNE9Szg29usYh2Gq-1seyqqBaVLF_s75spODN0t3LdNqlRsoRztUkDZUYw-aRe-MOScJlFpAG5xhaudtcM_Oz5-AAsCVRD-3zV4rB3-e5QY11q92p_OsXX4zJKY39uJvfB22Yv7TvMyflDW0yHneecM47lVZmSYSNpjw8lwpsehmj4FhOMe9PPoPHCo8Mr1WtZep9CL7UzpJE8Ma6bwRUXDwB6_JxA4GC2iP_VK9ONMYsXBfQTll1i9XdY2Mr04hKRWddlWRGNUfvIkdAEnNns7rF29hmPHA-RS23Z3MmipLnNPDiw2N-S3wJu3A-b5BH8HR8JwJJVgcnaRXu8wlRe_GiwZdNAl4ovi6qzG4tyl8An0BhU3bVPqDHOGz1o9iB1ecydV7OCljuqNHgHIVJnJa-fJRUkV-_x6zHOWgntFTOLRFGla_gb57vuYTAstOf4Q0A0gJJdNOv5v7Txc1HayPNKvmgiBFvz9Ot9Mn86X_xKkew1io4oCJsy1ozzvi0AjrQj7hYkbe8zbZmkrnaWQ0VcYjzD2ksJswz2xSAg2tQA6tgeMvUGBg57_9BUzLZD0ykzotZZRKOc8lYHOwKI4ot_sV_zXACnOs",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://shopifyall.herokuapp.com/products/62aa37f8126e785e6980343e",
+					"protocol": "https",
+					"host": [
+						"shopifyall",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"products",
+						"62aa37f8126e785e6980343e"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "successfull update product",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2MjlkMDQyMjE1NDMzOWU1N2NhZmJiMGQiLCJpYXQiOjE2NTQ1NTIzOTUzNjMsImV4cCI6MTY1NDU1MjQ4MTc2M30.IRApnjPv24rNPoEzCErZiCc1lGNNZ-RfssgkxVYkaNiPf0z2jyDmUqtnmskyzdB1nDMukBYMO65zVypBWg_JchFf0nB1rSuCgrkUNh87eMeLMzOY8OZl0NQXSRKML_uAJdZNJseanQBHb2KCBDn5TGKAQDLdAJTBO5QwX-y2wkgRR9TLyD0pf8KxCNZd9bzGPq8VX3CHMhGGZoZpMoTdrCINGXmzFWNbiqe0YPm5LjmF1-E5TED_A5937mHAP5JOCEASv6hgGbhEjwPOZMbF1sgr3u9GPvZbZqwPqr2-OHeCHFacUVnkQCrl9ANyfIsEerITc-kyKTbjyuzre502ZzoSobRGFzKDCR0CkVCDNN3mioHAGkU0hTFNmA5kRLW9gZLmsoIQyOkjKIojAo80pdkFqjbsi1b70L168cmQUHwd9y_rChPHHhiphNhqz-8YaQKrXckzZvz4Xl3qSKshOhx_WD6dCKjAmx3lAP6d4kGpjTqFxcNH1IidFZrlbDew6wqeIU3uYqe5zpIu2EGxCmoUwZi1mPLkXOX9FfKEuLySpjzqukVhaF40RN_aa5tLahzRXTeff1Uf8x7z0ZcF2zEwiAwek2p9qjCccjRzvISayBNwEu32kJyncLU1BcjjdJ4yQ2tVNrFkS8w7GwNoYMkILKismOPHezWxvte64f4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{   \n  \"category\": \"62a9e144a2e130e8babbd9d3\"\n\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://shopifyall.herokuapp.com/products/62a9e5059bf4241ce14b4cfa",
+					"protocol": "https",
+					"host": [
+						"shopifyall",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"products",
+						"62a9e5059bf4241ce14b4cfa"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "search with no key request",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "https://shopifyall.herokuapp.com/products/search",
+					"protocol": "https",
+					"host": [
+						"shopifyall",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"products",
+						"search"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "successful search request",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"productname\" : \"samsung a52\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://shopifyall.herokuapp.com/products/search",
+					"protocol": "https",
+					"host": [
+						"shopifyall",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"products",
+						"search"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "search for non exitsting product request",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"productname\" :\"iphone\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://shopifyall.herokuapp.com/products/search",
+					"protocol": "https",
+					"host": [
+						"shopifyall",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"products",
+						"search"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "successfull products retreive Copy",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://shopifyall.herokuapp.com/products",
+					"protocol": "https",
+					"host": [
+						"shopifyall",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"products"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
